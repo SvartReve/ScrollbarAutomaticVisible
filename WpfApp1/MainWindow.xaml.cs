@@ -30,7 +30,7 @@ namespace WpfApp1
 
         private void scrollBar_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
-            if(e.HorizontalOffset != 0)
+            if(e.HorizontalChange != 0)
             {
                 scrollBar.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
             }
@@ -47,9 +47,6 @@ namespace WpfApp1
             if (e.LeftButton == MouseButtonState.Released)
             {
                 scrollBar.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
-            }
-            if (e.LeftButton == MouseButtonState.Released)
-            {
                 scrollBar.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
             }
         }
